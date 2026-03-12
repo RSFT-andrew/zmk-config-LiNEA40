@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,
+            //スクロール方向を逆転,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -181,7 +181,7 @@
 &kp ESCAPE         &kp LEFT_BRACE         &kp LEFT_BRACKET   &kp RIGHT_BRACE  &kp RIGHT_BRACKET                    &kp HOME    &kp END                  &kp RG(W)      &kp RS(RG(V))  &kp RS(RG(NUMBER_4))
 &kp DOUBLE_QUOTES  &kp SEMICOLON          &kp BACKSLASH      &kp COLON        &kp CARET                            &trans      &mt RC(RS(TAB)) RC(TAB)  &kp RG(T)      &kp RG(L)      &kp RS(RG(F))
 &kp SQT            &kp GRAVE              &kp EQUAL          &kp UNDERSCORE   &kp LESS_THAN                        &trans      &kp RC(LEFT)             &kp RC(RIGHT)  &kp RS(RC(L))  &kp RG(M)
-&trans             &kp LG(RIGHT_BRACKET)  &kp RG(BACKSLASH)  &trans           &kp GREATER_THAN   &trans    &trans  &kp DELETE                           &trans         &trans         &trans
+&trans             &kp LG(RIGHT_BRACKET)  &kp RG(BACKSLASH)  &kp LC(LG(Q))    &kp GREATER_THAN   &trans    &trans  &kp DELETE                           &trans         &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
