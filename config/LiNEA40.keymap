@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,
+            //スクロール方向を逆転,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -135,10 +135,10 @@
 
         mouseNo,1 {
             bindings = <
-&kp ESCAPE            &mt END HOME          &kp GLOBE      &kp C   &kp RG(INT_YEN)                      &mt RG(F3) F3    &mkp MB4      &mkp MB5       &mkp MB1        &mkp MB2
-&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &trans  &kp RG(LEFT)                         &kp RS(RC(TAB))  &kp RC(TAB)   &mkp MB3       &msc SCRL_DOWN  &msc SCRL_UP
-&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &trans  &trans                               &trans           &kp RC(LEFT)  &kp RC(RIGHT)  &msc SCRL_LEFT  &msc SCRL_RIGHT
-&trans                &trans                &trans         &trans  &mkp MB2         &mkp MB1    &trans  &trans                         &trans         &trans          &trans
+&kp ESCAPE            &mt END HOME          &kp GLOBE      &kp C   &kp RG(INT_YEN)                      &mt RG(RA(DOWN)) RA(RG(UP))  &mkp MB4      &mkp MB5       &mkp MB1        &mkp MB2
+&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &trans  &kp RG(LEFT)                         &kp RS(RC(TAB))              &kp RC(TAB)   &mkp MB3       &msc SCRL_LEFT  &msc SCRL_RIGHT
+&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &trans  &trans                               &trans                       &kp RC(LEFT)  &kp RC(RIGHT)  &msc SCRL_DOWN  &msc SCRL_UP
+&trans                &trans                &trans         &trans  &mkp MB2         &mkp MB1    &trans  &trans                                     &trans         &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -146,10 +146,10 @@
 
         mouseNo.2 {
             bindings = <
-&kp ESCAPE            &mt END HOME          &kp GLOBE      &kp C            &kp LG(INT_YEN)                        &mt RG(F3) F3          &kp RS(LEFT)  &kp RS(UP)    &kp RS(RIGHT)  &kp RG(INT_YEN)
-&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(LC(TAB))  &kp LC(TAB)                            &kp RG(RIGHT_CONTROL)  &kp UP        &kp RS(DOWN)  &mkp MB3       &kp RG(LEFT)
-&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &kp LC(LEFT)     &kp LC(RIGHT_ARROW)                    &kp LEFT               &kp DOWN      &kp RIGHT     &kp PAGE_DOWN  &kp PAGE_UP
-&trans                &trans                &trans         &trans           &trans               &trans    &trans  &trans                               &trans        &trans         &trans
+&kp ESCAPE            &mt END HOME          &kp GLOBE      &kp C            &kp LG(INT_YEN)                        &mt PAGE_UP PAGE_DOWN  &kp RS(LEFT)  &kp RS(UP)    &kp RS(RIGHT)   &kp RG(INT_YEN)
+&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &kp LS(LC(TAB))  &kp LC(TAB)                            &kp RG(RIGHT_CONTROL)  &kp UP        &kp RS(DOWN)  &mkp MB3        &kp RG(LEFT)
+&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &kp LC(LEFT)     &kp LC(RIGHT_ARROW)                    &kp LEFT               &kp DOWN      &kp RIGHT     &msc SCRL_DOWN  &msc SCRL_UP
+&trans                &trans                &trans         &trans           &trans               &trans    &trans  &trans                               &trans        &trans          &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
