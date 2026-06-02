@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -155,7 +155,7 @@
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N9)     &kp LS(NUMBER_5)  &kp LS(NUMBER_0)                    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL  &kp INT_YEN
 &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp KP_DIVIDE  &kp KP_ASTERISK   &kp LS(NUMBER_6)                    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON  &kp TILDE
 &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp PLUS       &kp MINUS         &trans                              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0     &kp PERIOD
-&trans            &trans            &kp LG(Y)      &trans            &trans            &trans    &trans  &kp DELETE                  &trans        &trans     &trans
+&trans            &trans            &kp LG(Y)      &trans            &trans            &trans    &trans  &trans                      &trans        &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
