@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -129,7 +129,7 @@
 &lt 6 LANGUAGE_2  &kp LG(Z)               &kp LS(LG(Z))         &kp C_MUTE  &mt LEFT_SHIFT PERIOD  &kp SPACE    &lt 3 ENTER  &kp BACKSPACE         &mt RIGHT_ALT MINUS  &mt RIGHT_CONTROL TAB  &mt RIGHT_COMMAND LANGUAGE_1
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         other {
@@ -140,7 +140,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         mouseNo,1 {
@@ -151,7 +151,7 @@
 &trans                &trans                &trans         &trans  &mkp MB2         &mkp MB1    &trans  &trans                                     &trans         &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         mouseNo.2 {
@@ -162,7 +162,7 @@
 &trans                &trans                &trans         &trans           &trans               &trans    &trans  &trans                               &trans        &trans          &trans
             >;
 
-            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Number {
@@ -173,7 +173,7 @@
 &trans            &trans            &kp LG(Y)      &trans            &trans            &trans    &trans  &trans                      &trans        &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         symbol {
@@ -184,7 +184,7 @@
 &trans             &kp LG(RIGHT_BRACKET)  &kp RG(BACKSLASH)  &kp LC(LG(Q))    &kp GREATER_THAN   &trans    &trans  &kp DELETE                           &trans         &trans         &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         WIRELESS {
