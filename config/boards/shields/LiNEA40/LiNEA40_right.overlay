@@ -58,17 +58,16 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT-D6
 
-        /* 感度（DPI/CPI）を落とす */
-        cpi = <400>;
-
-　　　　　/* 発動に必要なボールの移動量（しきい値） */
-        automouse-threshold = <10>;  /* デフォルトは通常 0 または 1 程度 */
-
-        /* オートマウスレイヤー（Layer 1）と継続時間　*/
+        /* レイヤー1をオートマウス化 */
         automouse-layer = <1>;
+
+        /* ボール停止後、通常レイヤーに戻るまでの待機時間(ms) */
         automouse-timeout-ms = <400>;
 
-        /* レイヤー2をスクロールに割り当て */
+        /* オートマウスレイヤーが発動するまでの移動量しきい値（誤爆防止） */
+        automouse-threshold = <10>;
+
+        /* レイヤー2でスクロールを有効化 */
         scroll-layers = <2>;
     };
 };
