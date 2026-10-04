@@ -43,9 +43,6 @@
 };
 
 &trackball_listener {
-    /* オートマウスの復帰時間（全体に適用） */
-    input-processors = <&zip_temp_layer 1 300>;
-
     scroller {
         layers = <2>;
         input-processors = 
