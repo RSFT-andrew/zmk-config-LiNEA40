@@ -43,15 +43,17 @@
 };
 
 &trackball_listener {
+    /* オートマウスの復帰時間（全体に適用） */
+    input-processors = <&zip_temp_layer 1 300>;
+
     scroller {
-        layers = <SCROLL>;
-        input-processors = <&zip_temp_layer 1 300>;
+        layers = <MARK SCROLL>;
+        input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            /* スクロール方向を逆転 */
             <&zip_xy_to_scroll_mapper>;
     };
 };
-
 / {
     combos {
         compatible = "zmk,combos";
