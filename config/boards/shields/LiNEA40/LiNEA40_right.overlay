@@ -58,8 +58,13 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT-D6
         automouse-layer = <1>;
-　　　　　cpi = <400>;
+        cpi = <400>;
     };
+};
+
+&trackball_listener {
+    status = "okay";
+    device = <&trackball>;
 };
 
 &trackball_listener {
