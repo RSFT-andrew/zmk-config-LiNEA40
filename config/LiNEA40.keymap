@@ -45,11 +45,13 @@
 &trackball_listener {
     scroller {
         layers = <2 5>;
-        input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, 
-                           <&zip_xy_to_scroll_mapper>,
-                           <&zip_wheel_scaler 1 16>;
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_xy_to_scroll_mapper>,
+            <&zip_wheel_scaler 1 16>;
     };
 };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -70,17 +72,17 @@
         };
 
         Layer4 {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <25 26>;
         };
 
         Layer2 {
-            bindings = <&tog 2>;
-            key-positions = <15 16>;
+            bindings = <&tog 3>;
+            key-positions = <18 19>;
         };
 
         Layer1 {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <8 9>;
         };
     };
@@ -108,18 +110,27 @@
             bindings = <
 &kp W             &kp E                   &kp LEFT_PARENTHESIS  &kp I       &kp RIGHT_PARENTHESIS                            &kp F          &kp S  &kp Y                &kp H                  &kp P
 &kp A             &kp U                   &kp X                 &kp C       &kp O                                            &kp R          &kp K  &kp T                &kp D                  &kp N
-&kp Q             &mt AMPERSAND QUESTION  &kp J                 &kp V       &lt 3 COMMA                                      &kp Z          &kp G  &kp B                &kp L                  &lt 2 M
-&lt 5 LANGUAGE_2  &kp LG(Z)               &kp LS(LG(Z))         &kp C_MUTE  &mt LEFT_SHIFT PERIOD  &kp SPACE    &lt 2 ENTER  &kp BACKSPACE         &mt RIGHT_ALT MINUS  &mt RIGHT_CONTROL TAB  &mt RIGHT_COMMAND LANGUAGE_1
+&kp Q             &mt AMPERSAND QUESTION  &kp J                 &kp V       &lt 4 COMMA                                      &kp Z          &kp G  &kp B                &kp L                  &lt 3 M
+&lt 6 LANGUAGE_2  &kp LG(Z)               &kp LS(LG(Z))         &kp C_MUTE  &mt LEFT_SHIFT PERIOD  &kp SPACE    &lt 3 ENTER  &kp BACKSPACE         &mt RIGHT_ALT MINUS  &mt RIGHT_CONTROL TAB  &mt RIGHT_COMMAND LANGUAGE_1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
+        none {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
+            >;
         };
 
         mouseNo.1 {
             bindings = <
 &trans  &trans    &trans    &trans  &trans                        &none            &none          &mkp MB4              &mkp MB5       &kp RC(RG(A))
 &trans  &trans    &trans    &trans  &trans                        &kp RC(RS(TAB))  &kp RC(TAB)    &mkp MB1              &mkp MB2       &mkp MB3
-&trans  &trans    &trans    &trans  &trans                        &kp RC(LEFT)     &kp RC(RIGHT)  &kp RS(RG(NUMBER_4))  &kp RS(RG(V))  &lt 2 RG(M)
+&trans  &trans    &trans    &trans  &trans                        &kp RC(LEFT)     &kp RC(RIGHT)  &kp RS(RG(NUMBER_4))  &kp RS(RG(V))  &lt 3 RG(M)
 &trans  &mkp MB4  &mkp MB5  &trans  &mkp MB2  &mkp MB1    &trans  &trans                          &trans                &trans         &trans
             >;
 
