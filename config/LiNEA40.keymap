@@ -58,32 +58,47 @@
 
         Reset-Layer {
             bindings = <&to 0>;
-            key-positions = <6 5>;
+            key-positions = <5 6>;
         };
 
-        mousebutton1L {
-            bindings = <&mkp MB1>;
-            key-positions = <26 27>;
+        mouse-Layer1 {
+            bindings = <&tog 2>;
+            key-positions = <15 16>;
         };
 
-        mousebutton2L {
-            bindings = <&mkp MB2>;
-            key-positions = <16 17>;
-        };
-
-        Layer4 {
-            bindings = <&tog 5>;
+        scoll3 {
+            bindings = <&tog 3>;
             key-positions = <25 26>;
         };
 
-        Layer2 {
-            bindings = <&tog 3>;
-            key-positions = <18 19>;
+        Number4 {
+            bindings = <&tog 4>;
+            key-positions = <6 7>;
         };
 
-        Layer1 {
-            bindings = <&tog 2>;
-            key-positions = <8 9>;
+        Symbol {
+            bindings = <&tog 5>;
+            key-positions = <16 17>;
+        };
+
+        BluetoothOther {
+            bindings = <&tog 6>;
+            key-positions = <26 27>;
+        };
+
+        Reload {
+            bindings = <&kp RG(R)>;
+            key-positions = <37 36>;
+        };
+
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <37 25>;
+        };
+
+        BackSpace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <37 15>;
         };
     };
 
@@ -101,6 +116,25 @@
 
             tap-ms = <20>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <20>;
+            label = "NEW_BEHAVIOR";
+        };
+
+        mousekp_kp: mousekp_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOUSEKP_KP";
+            bindings = <&mkp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            hold-trigger-key-positions = <34>;
+        };
     };
 
     keymap {
@@ -110,7 +144,7 @@
             bindings = <
 &kp W             &kp E                   &kp LEFT_PARENTHESIS  &kp I       &kp RIGHT_PARENTHESIS                            &kp F          &kp S  &kp Y                &kp H                  &kp P
 &kp A             &kp U                   &kp X                 &kp C       &kp O                                            &kp R          &kp K  &kp T                &kp D                  &kp N
-&kp Q             &mt AMPERSAND QUESTION  &kp J                 &kp V       &lt 4 COMMA                                      &kp Z          &kp G  &kp B                &kp L                  &lt 3 M
+&kp Q             &mt AMPERSAND QUESTION  &kp J                 &kp V       &lt 4 COMMA                                      &kp Z          &kp G  &kp B                &mt RIGHT_CONTROL L    &mousekp_kp MB3 M
 &lt 6 LANGUAGE_2  &kp LG(Z)               &kp LS(LG(Z))         &kp C_MUTE  &mt LEFT_SHIFT PERIOD  &kp SPACE    &lt 3 ENTER  &kp BACKSPACE         &mt RIGHT_ALT MINUS  &mt RIGHT_CONTROL TAB  &mt RIGHT_COMMAND LANGUAGE_1
             >;
 
@@ -126,23 +160,23 @@
             >;
         };
 
-        mouseNo.1 {
+        mouse {
             bindings = <
-&trans  &trans    &trans    &trans  &trans                        &none            &none          &mkp MB4              &mkp MB5       &kp RC(RG(A))
-&trans  &trans    &trans    &trans  &trans                        &kp RC(RS(TAB))  &kp RC(TAB)    &mkp MB1              &mkp MB2       &mkp MB3
-&trans  &trans    &trans    &trans  &trans                        &kp RC(LEFT)     &kp RC(RIGHT)  &kp RS(RG(NUMBER_4))  &kp RS(RG(V))  &lt 3 RG(M)
-&trans  &mkp MB4  &mkp MB5  &trans  &mkp MB2  &mkp MB1    &trans  &trans                          &trans                &trans         &trans
+&trans  &trans    &trans    &trans    &trans                                     &mkp MB4         &mkp MB5       &mt RG(W) RG(T)           &mt RS(RG(NUMBER_1)) RS(RG(NUMBER_2))  &kp RC(RG(A))
+&trans  &trans    &trans    &trans    &trans                                     &kp RC(RS(TAB))  &kp RC(TAB)    &mkp MB1                  &mkp MB2                               &kp RC(LEFT)
+&trans  &trans    &trans    &trans    &mo 4                                      &kp RC(LEFT)     &kp RC(RIGHT)  &kp RS(RG(NUMBER_4))      &kp RS(RG(V))                          &lt 3 RG(M)
+&trans  &mkp MB4  &mkp MB5  &mkp MB3  &mousekp_kp MB2 SPACE  &mkp MB1    &trans  &trans                          &mt RA(RG(UP)) RG(MINUS)  &mt RA(RG(DOWN)) RG(PLUS)              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        mouseNo.2 {
+        scroll {
             bindings = <
-&kp ESCAPE            &mt HOME END          &kp GLOBE      &kp C             &kp LG(LC(A))                    &mt HOME END           &kp RS(LEFT)  &kp RS(UP)    &kp RS(RIGHT)  &kp RG(RC(A))
-&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &msc SCRL_UP      &kp LG(LEFT)                     &kp RG(RIGHT_CONTROL)  &kp UP        &kp RS(DOWN)  &none          &kp RG(LEFT)
-&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &msc SCRL_DOWN    &trans                           &kp LEFT               &kp DOWN      &kp RIGHT     &none          &trans
-&trans                &mkp MB4              &mkp MB5       &kp RG(NUMBER_0)  &trans         &trans    &trans  &trans                               &none         &none          &trans
+&kp ESCAPE            &mt HOME END          &kp GLOBE      &kp C           &kp LG(LC(A))                    &mt HOME END           &kp RS(LEFT)  &kp RS(UP)    &kp RS(RIGHT)      &kp RG(RC(A))
+&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &msc SCRL_UP    &kp LG(LEFT)                     &kp RG(RIGHT_CONTROL)  &kp UP        &kp RS(DOWN)  &none              &kp RG(LEFT)
+&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &msc SCRL_DOWN  &trans                           &kp LEFT               &kp DOWN      &kp RIGHT     &kp RIGHT_CONTROL  &trans
+&trans                &mkp MB4              &mkp MB5       &mkp MB3        &trans         &trans    &trans  &trans                               &none         &none              &trans
             >;
 
             sensor-bindings = <&re_kp RG(PLUS) RG(MINUS)>;
@@ -172,10 +206,10 @@
 
         WIRELESS {
             bindings = <
-&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0                               &kp RC(RA(R))          &kp RC(RG(LEFT))  &kp RC(RG(UP))     &kp RC(RG(RIGHT))  &none
-&none         &none         &none           &none           &none                                      &kp RC(RA(RS(UP)))     &kp RC(RA(UP))    &kp RC(RG(DOWN))   &none              &none
-&none         &none         &none           &bt BT_CLR_ALL  &bt BT_CLR                                 &kp RC(RA(LEFT))       &kp RC(RA(DOWN))  &kp RC(RA(RIGHT))  &none              &none
-&trans        &bootloader   &studio_unlock  &trans          &trans        &trans    &kp RC(RA(ENTER))  &kp RC(RA(BACKSPACE))                    &trans             &trans             &trans
+&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0                                                                 &kp RC(RA(R))          &kp RC(RG(LEFT))  &kp RC(RG(UP))     &kp RC(RG(RIGHT))  &none
+&none         &none         &none           &none           &none                                                                        &kp RC(RA(RS(UP)))     &kp RC(RA(UP))    &kp RC(RG(DOWN))   &none              &none
+&none         &none         &none           &bt BT_CLR_ALL  &bt BT_CLR                                                                   &kp RC(RA(LEFT))       &kp RC(RA(DOWN))  &kp RC(RA(RIGHT))  &none              &none
+&trans        &bootloader   &studio_unlock  &trans          &kp RS(RA(RG(LEFT_CONTROL)))  &kp RA(RG(LEFT_CONTROL))    &kp RC(RA(ENTER))  &kp RC(RA(BACKSPACE))                    &trans             &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
