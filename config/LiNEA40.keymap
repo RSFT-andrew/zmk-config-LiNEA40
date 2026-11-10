@@ -182,8 +182,8 @@
 
         mouse {
             bindings = <
-&trans  &trans    &trans    &trans    &trans                                     &mkp MB4         &mkp MB5       &kp RG(W)                   &kp RS(RG(NUMBER_1))         &kp RC(RG(A))
-&trans  &trans    &trans    &trans    &trans                                     &kp RC(RS(TAB))  &kp RC(TAB)    &kp RG(T)                   &kp RS(RG(NUMBER_2))         &kp RC(LEFT)
+&trans  &trans    &trans    &trans    &trans                                     &mkp MB4         &mkp MB5       &kp RG(W)                   &kp RS(RG(NUMBER_2))         &kp RC(RG(A))
+&trans  &trans    &trans    &trans    &trans                                     &kp RC(RS(TAB))  &kp RC(TAB)    &kp RG(T)                   &kp RS(RG(NUMBER_1))         &kp RC(LEFT)
 &trans  &trans    &trans    &trans    &mo 4                                      &kp RC(LEFT)     &kp RC(RIGHT)  &kp RS(RG(NUMBER_4))        &kp RS(RG(V))                &lt (3) RG(M)
 &trans  &mkp MB4  &mkp MB5  &mkp MB3  &mousekp_kp MB2 SPACE  &mkp MB1    &trans  &trans                          &mt (RA(RG(UP))) RG(MINUS)  &mt (RA(RG(DOWN))) RG(PLUS)  &trans
             >;
@@ -193,10 +193,10 @@
 
         scroll {
             bindings = <
-&kp ESCAPE            &mt HOME END          &kp GLOBE      &kp C           &kp LG(LC(A))                    &mt HOME END           &kp RS(LEFT)  &kp RS(UP)    &kp RS(RIGHT)      &kp RG(RC(A))
-&kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_1))  &kp LS(LG(X))  &msc SCRL_UP    &kp LG(LEFT)                     &kp RG(RIGHT_CONTROL)  &kp UP        &kp RS(DOWN)  &none              &kp RG(LEFT)
-&kp LS(LG(V))         &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &msc SCRL_DOWN  &trans                           &kp LEFT               &kp DOWN      &kp RIGHT     &kp RIGHT_CONTROL  &trans
-&trans                &mkp MB4              &mkp MB5       &mkp MB3        &trans         &trans    &trans  &trans                               &none         &none              &trans
+&kp ESCAPE     &mt HOME END          &kp GLOBE      &kp C           &kp LG(LC(A))                    &mt HOME END           &kp RS(LEFT)  &kp RS(UP)      &kp RS(RIGHT)  &kp RG(RC(A))
+&kp LG(L)      &kp LS(LG(F))         &kp LS(LG(X))  &msc SCRL_UP    &kp LG(LEFT)                     &kp RG(RIGHT_CONTROL)  &kp UP        &kp RS(DOWN)    &none          &kp RG(LEFT)
+&kp LS(LG(V))  &kp LS(LG(NUMBER_4))  &kp LS(LG(F))  &msc SCRL_DOWN  &trans                           &kp LEFT               &kp DOWN      &kp RIGHT       &kp RS(RC(L))  &trans
+&trans         &mkp MB4              &mkp MB5       &mkp MB3        &trans         &trans    &trans  &trans                               &msc SCRL_DOWN  &msc SCRL_UP   &trans
             >;
 
             sensor-bindings = <&re_kp RG(PLUS) RG(MINUS)>;
