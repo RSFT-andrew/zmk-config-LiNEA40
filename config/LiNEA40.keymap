@@ -115,6 +115,11 @@
             bindings = <&mkp MB3>;
             key-positions = <17 19>;
         };
+
+        mouse-Layer2 {
+            bindings = <&mo 2>;
+            key-positions = <34 24>;
+        };
     };
 
     behaviors {
