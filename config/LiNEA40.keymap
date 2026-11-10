@@ -100,6 +100,21 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <37 15>;
         };
+
+        mousebuttom1 {
+            bindings = <&mkp MB1>;
+            key-positions = <17 18>;
+        };
+
+        mousebuttom2 {
+            bindings = <&mkp MB2>;
+            key-positions = <18 19>;
+        };
+
+        mousebuttom3 {
+            bindings = <&mkp MB3>;
+            key-positions = <17 19>;
+        };
     };
 
     behaviors {
@@ -162,10 +177,10 @@
 
         mouse {
             bindings = <
-&trans  &trans    &trans    &trans    &trans                                     &mkp MB4         &mkp MB5       &mt RG(W) RG(T)           &mt RS(RG(NUMBER_1)) RS(RG(NUMBER_2))  &kp RC(RG(A))
-&trans  &trans    &trans    &trans    &trans                                     &kp RC(RS(TAB))  &kp RC(TAB)    &mkp MB1                  &mkp MB2                               &kp RC(LEFT)
-&trans  &trans    &trans    &trans    &mo 4                                      &kp RC(LEFT)     &kp RC(RIGHT)  &kp RS(RG(NUMBER_4))      &kp RS(RG(V))                          &lt 3 RG(M)
-&trans  &mkp MB4  &mkp MB5  &mkp MB3  &mousekp_kp MB2 SPACE  &mkp MB1    &trans  &trans                          &mt RA(RG(UP)) RG(MINUS)  &mt RA(RG(DOWN)) RG(PLUS)              &trans
+&trans  &trans    &trans    &trans    &trans                                     &mkp MB4         &mkp MB5       &kp RG(W)                   &kp RS(RG(NUMBER_1))         &kp RC(RG(A))
+&trans  &trans    &trans    &trans    &trans                                     &kp RC(RS(TAB))  &kp RC(TAB)    &kp RG(T)                   &kp RS(RG(NUMBER_2))         &kp RC(LEFT)
+&trans  &trans    &trans    &trans    &mo 4                                      &kp RC(LEFT)     &kp RC(RIGHT)  &kp RS(RG(NUMBER_4))        &kp RS(RG(V))                &lt (3) RG(M)
+&trans  &mkp MB4  &mkp MB5  &mkp MB3  &mousekp_kp MB2 SPACE  &mkp MB1    &trans  &trans                          &mt (RA(RG(UP))) RG(MINUS)  &mt (RA(RG(DOWN))) RG(PLUS)  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
